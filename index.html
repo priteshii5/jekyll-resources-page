@@ -172,68 +172,34 @@
             <h2> Press </h2>
             <div class="container">
                 <div class="row">
+                  {% for news_article in site.data.news_articles limit: 3 %}
                     <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
+                      <div class="body grey-bg">
+                        <a href="{{ news_article.url}}" target="_blank">
+                          <img src="{{ news_article.image }}">
+                          <div class="description">
+                            <h4>{{ news_article.title }}</h4>
+                            <p> {{ news_article.date }} | {{ news_article.author }}</p>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                    <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                  {% endfor %}
                 </div>
                 <div class="row">
+                  {% for news_article in site.data.news_articles offset: 2 limit: 3 %}
                     <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
+                      <div class="body grey-bg">
+                        <a href="{{ news_article.url}}" target="_blank">
+                          <img src="{{ news_article.image }}">
+                          <div class="description">
+                            <h4>{{ news_article.title }}</h4>
+                            <p> {{ news_article.date }} | {{ news_article.author }}</p>
+                          </div>
+                        </a>
+                      </div>
                     </div>
-                    <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="body grey-bg">
-                            <div class="description">
-                                <h4> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h4>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                  {% endfor %}
                 </div>
             </div>
         </div>
