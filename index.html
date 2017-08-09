@@ -207,33 +207,15 @@
             <h2> Product Videos </h2>
             <div class="container">
                 <div class="row">
+                    {% for video in site.data.videos %}
                     <div class="col">
                         <div class="videos grey-bg">
-                            <span class="glyphicon glyphicon-facetime-video"></span>
+                            <iframe width="360" height="200" src="{{ video.url }}" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <h4> Video Name
-                        </h4>
-                        <p> Aug 4, 2017 | Emi Yoshikawa
-                        </p>
+                            <h4>{{ video.title }}</h4>
+                        <p>{{ video.date }} | {{ video.author }}</p>
                     </div>
-                    <div class="col">
-                        <div class="videos grey-bg">
-                            <span class="glyphicon glyphicon-facetime-video"></span>
-                        </div>
-                        <h4> Video Name
-                        </h4>
-                        <p> Aug 4, 2017 | Emi Yoshikawa
-                        </p>
-                    </div>
-                    <div class="col">
-                        <div class="videos grey-bg">
-                            <span> MORE </span>
-                        </div>
-                        <h4> Video Name
-                        </h4>
-                        <p> Aug 4, 2017 | Emi Yoshikawa
-                        </p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
