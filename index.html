@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,41 +57,46 @@
             </div>
     </div>
     <div class="resource-body">
-        <div class="resource-banner">
-            <div class="container">
-                <div class="row no-gutters">
-                    <div class="col-sm-7">
-                        <div class="content with-full-height">
-                            <div class="body">
-                                <h2> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h2>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="content with-half-height">
-                            <div class="body">
-                                <h2> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h2>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                        <div class="content with-half-height grey-bg">
-                            <div class="body">
-                                <h2> Header 1 is simply dummy text of the printing and typesetting industry
-                                </h2>
-                                <p> Aug 4, 2017 | Emi Yoshikawa
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="resource-banner">
+        <div class="container">
+          {% assign insight1 = site.data.insights[0] %}
+          {% assign insight2 = site.data.insights[1] %}
+          {% assign insight3 = site.data.insights[2] %}
+          <div class="row no-gutters">
+            <div class="col-sm-7">
+              <div class="content with-full-height">
+                <a href="{{ insight1.url}}" target="_blank">
+                  <img src="{{ insight1.image }}">
+                  <div class="body">
+                    <h2>{{ insight1.title }}</h2>
+                    <p>{{ insight1.date }} | {{ insight1.author }}</p>
+                  </div>
+                </a>
+              </div>
             </div>
+            <div class="col-sm-5">
+              <div class="content with-half-height">
+                <a href="{{ insight1.url }}" target="_blank">
+                  <img src="{{ insight2.image }}">
+                  <div class="body">
+                    <h2>{{ insight2.title }}</h2>
+                    <p>{{ insight2.date }} | {{ insight2.author }}</p>
+                  </div>
+                </a>
+              </div>
+              <div class="content with-half-height grey-bg">
+                <a href="{{ insight3.url }}" target="_blank">
+                  <img src="{{ insight3.image }}">
+                  <div class="body">
+                    <h2> {{ insight3.title }}</h2>
+                    <p>{{ insight3.date }} | {{ insight3.author }}</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
         <div class="roadmap-main">
             <h2> EOS.IO Software Roadmap
             </h2>
